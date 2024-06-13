@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">API_Methods_002</string>
+    <string name="get_method">Método GET</string>
+    <string name="home_screen">Tela Inicial</string>
 </resources>
