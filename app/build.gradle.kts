@@ -34,13 +34,15 @@ android {
         jvmTarget = "1.8"
     }
 
-    viewBinding{
+    viewBinding {
         enable = true
     }
 }
 
 dependencies {
 
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.gson)
     implementation(libs.retrofit)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
