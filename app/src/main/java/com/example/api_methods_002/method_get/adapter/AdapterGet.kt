@@ -75,6 +75,7 @@ class AdapterGet(
     }
 
     override fun getItemCount(): Int {
+
         return listUserJson.size
     }
 }

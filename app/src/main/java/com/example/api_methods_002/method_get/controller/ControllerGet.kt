@@ -27,7 +27,7 @@ class ControllerGet() {
 
                     val apiData = response.body()
                     returnResponseGet.successResponseGet(it)
-                    println("Resposta de Sucesso GET = $response ")
+                    println("Resposta de Sucesso GET = $apiData")
                 }
             }
 

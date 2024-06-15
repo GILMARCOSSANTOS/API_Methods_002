@@ -7,37 +7,49 @@
     android:layout_height="match_parent"
     tools:context=".method_get.view.GetActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout_includeTitle_title_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/linearLayout_includeTitle_title_id"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
 
-        <include
+    <!--        <include-->
 
-            layout="@layout/component_title" />
+    <!--            layout="@layout/component_title" />-->
 
-    </LinearLayout>
+    <!--    </LinearLayout>-->
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout_includeSubtitle_title_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout_includeTitle_title_id">
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/linearLayout_includeSubtitle_title_id"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/linearLayout_includeTitle_title_id">-->
 
-        <include
+    <!--        <include-->
 
-            layout="@layout/component_subtitle" />
+    <!--            layout="@layout/component_subtitle" />-->
 
-    </LinearLayout>
+    <!--    </LinearLayout>-->
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/recyclerView_get_id"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/linearLayout_includeButtomBack_id"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/linearLayout_includeSubtitle_title_id"-->
+    <!--        tools:listitem="@layout/component_get" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_get_id"
@@ -45,27 +57,27 @@
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@id/linearLayout_includeButtomBack_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout_includeSubtitle_title_id"
-        tools:listitem="@layout/component_get" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout_includeButtomBack_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/component_get" />
 
-        <include
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/linearLayout_includeButtomBack_id"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent">-->
 
-            layout="@layout/component_button_back" />
+    <!--        <include-->
 
-    </LinearLayout>
+    <!--            layout="@layout/component_button_back" />-->
+
+    <!--    </LinearLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
