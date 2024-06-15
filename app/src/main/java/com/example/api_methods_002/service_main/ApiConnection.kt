@@ -22,9 +22,9 @@ class ApiConnection() {
         }
     }
 
-    fun getRetrofitInstance(): Retrofit{
+    fun getRetrofitInstance(): Retrofit {
 
-        if (!::retrofit.isInitialized){
+        if (!::retrofit.isInitialized) {
 
             httpClient.addInterceptor(getHeaderInterceptor())
             httpClient.networkInterceptors()
@@ -35,5 +35,10 @@ class ApiConnection() {
                 .build()
         }
         return retrofit
+    }
+
+    fun <S> createService(serviceClass: Class<S>): S {
+
+        return getRetrofitInstance().create(serviceClass)
     }
 }
