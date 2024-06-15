@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.api_methods_002.databinding.ActivityMainBinding
+import com.example.api_methods_002.get.GetActivity
 
 class MainActivity : AppCompatActivity() {
 

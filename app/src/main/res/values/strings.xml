@@ -2,4 +2,6 @@
     <string name="app_name">API_Methods_002</string>
     <string name="get_method">Método GET</string>
     <string name="home_screen">Tela Inicial</string>
+    <string name="choose_method">Escolha um dos Métodos da API para trabalhar:</string>
+    <string name="buttom_back">Voltar</string>
 </resources>

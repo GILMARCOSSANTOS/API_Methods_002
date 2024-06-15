@@ -1,4 +1,4 @@
-package com.example.api_methods_002
+package com.example.api_methods_002.service
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

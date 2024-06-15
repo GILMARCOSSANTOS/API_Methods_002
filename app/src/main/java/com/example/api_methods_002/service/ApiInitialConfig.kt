@@ -1,4 +1,4 @@
-package com.example.api_methods_002
+package com.example.api_methods_002.service
 
 enum class EnviromentConfig(val env: String) {
 

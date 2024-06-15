@@ -1,12 +1,12 @@
-package com.example.api_methods_002
+package com.example.api_methods_002.get
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.api_methods_002.R
 import com.example.api_methods_002.databinding.ActivityGetBinding
-import com.example.api_methods_002.databinding.ActivityMainBinding
 
 class GetActivity : AppCompatActivity() {
 
