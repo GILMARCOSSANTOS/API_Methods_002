@@ -1,7 +1,5 @@
-package com.example.api_methods_002.get.model
+package com.example.api_methods_002.method_get.model
 
-import com.example.api_methods_002.get.model.Address
-import com.example.api_methods_002.get.model.Company
 import com.google.gson.annotations.SerializedName
 
 data class ModelGetItem(

@@ -28,7 +28,7 @@
             android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textView_nome_componentGet_id"
+            android:id="@+id/textView_name_componentGet_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -58,7 +58,7 @@
             android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textView_CEP_componentGet_id"
+            android:id="@+id/textView_cep_componentGet_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"

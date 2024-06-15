@@ -1,6 +1,6 @@
-package com.example.api_methods_002.get
+package com.example.api_methods_002.method_get.service
 
-import com.example.api_methods_002.get.model.ModelGetItem
+import com.example.api_methods_002.method_get.model.ModelGetItem
 import retrofit2.http.GET
 
 interface GetService {

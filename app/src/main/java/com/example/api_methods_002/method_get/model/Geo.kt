@@ -1,4 +1,4 @@
-package com.example.api_methods_002.get.model
+package com.example.api_methods_002.method_get.model
 
 import com.google.gson.annotations.SerializedName
 

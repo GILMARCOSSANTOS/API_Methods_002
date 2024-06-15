@@ -5,4 +5,13 @@ Notepad:
 
 ▬▬▬ Para Documentar:
 • Posso acessar qualquer umas das Propriedades do Model ao usar 'ModelGetItem' em GetService?
+
 • GetService em Projetos aonde a URL Base não precisa de Parâmetros.
+
+• Posso acessar City(?):
+override fun onBindViewHolder(holder: UserJsonViewHolder, position: Int) {
+
+        val jsonData = listUserJson[position]
+        val city = jsonData.address.city
+        println("City = " + city)
+    }

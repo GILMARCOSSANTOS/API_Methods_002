@@ -1,10 +1,12 @@
-package com.example.api_methods_002.get
+package com.example.api_methods_002.method_get.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.api_methods_002.R
 import com.example.api_methods_002.databinding.ActivityGetBinding
 import com.google.android.material.button.MaterialButton
@@ -14,6 +16,7 @@ class GetActivity : AppCompatActivity() {
 
     /* Global Escope Variables */
     private lateinit var viewBinding: ActivityGetBinding
+    private lateinit var recyclerViewGet: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +33,13 @@ class GetActivity : AppCompatActivity() {
         /* Execution of Functions */
         globalLevelSettings()
         backToMainActivity()
+        settingRecyclerViewGet()
+    }
+
+    private fun settingRecyclerViewGet(){
+
+        recyclerViewGet.setHasFixedSize(true)
+        recyclerViewGet.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 
     private fun backToMainActivity(){
@@ -50,6 +60,8 @@ class GetActivity : AppCompatActivity() {
 
         val textViewTitle = findViewById<MaterialTextView>(R.id.textView_title_id)
         val textViewSubTitle = findViewById<MaterialTextView>(R.id.textView_subtitle_id)
+
+        recyclerViewGet = viewBinding.recyclerViewGetId
         textViewTitle.text = getString(R.string.get_method)
         textViewSubTitle.text = getString(R.string.api_data)
     }
