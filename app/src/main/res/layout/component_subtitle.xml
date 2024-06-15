@@ -5,14 +5,12 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView_title_id"
+        android:id="@+id/textView_subtitle_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:text="Sub_Title"
         android:gravity="center"
-        android:text="Title"
-        android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

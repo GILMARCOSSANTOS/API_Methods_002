@@ -4,4 +4,8 @@
     <string name="home_screen">Tela Inicial</string>
     <string name="choose_method">Escolha um dos Métodos da API para trabalhar:</string>
     <string name="buttom_back">Voltar</string>
+    <string name="initial_screen">Tela Inicial</string>
+    <string name="subtitle_main">Escolha um dos Métodos da API</string>
+    <string name="back_main_activity">Voltar para MainActivity</string>
+    <string name="api_data">Dados da API</string>
 </resources>

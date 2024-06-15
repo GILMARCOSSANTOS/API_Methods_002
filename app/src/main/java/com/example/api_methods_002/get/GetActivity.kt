@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.api_methods_002.R
 import com.example.api_methods_002.databinding.ActivityGetBinding
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
 
 class GetActivity : AppCompatActivity() {
@@ -27,12 +28,29 @@ class GetActivity : AppCompatActivity() {
         }
 
         /* Execution of Functions */
-        globalLevel()
+        globalLevelSettings()
+        backToMainActivity()
     }
 
-    private fun globalLevel (){
+    private fun backToMainActivity(){
 
-        val textViewTitle = findViewById<MaterialTextView>(R.id.textView_screenTitle_id)
+        val buttomBack = findViewById<MaterialButton>(R.id.button_navigateActivity_id)
+        buttomBack.text = getString(R.string.back_main_activity)
+
+        buttomBack.setOnClickListener {
+
+            if (buttomBack.isClickable){
+
+                finish()
+            }
+        }
+    }
+
+    private fun globalLevelSettings (){
+
+        val textViewTitle = findViewById<MaterialTextView>(R.id.textView_title_id)
+        val textViewSubTitle = findViewById<MaterialTextView>(R.id.textView_subtitle_id)
         textViewTitle.text = getString(R.string.get_method)
+        textViewSubTitle.text = getString(R.string.api_data)
     }
 }

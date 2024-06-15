@@ -8,7 +8,7 @@
     tools:context=".get.GetActivity">
 
     <LinearLayout
-        android:id="@+id/linearLAyout_includeTitle_title_id"
+        android:id="@+id/linearLayout_includeTitle_title_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,41 +22,50 @@
     </LinearLayout>
 
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView_apiData_id"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout_includeSubtitle_title_id"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Dados da API"
-        android:textSize="25sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLAyout_includeTitle_title_id" />
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_includeTitle_title_id">
+
+        <include
+
+            layout="@layout/component_subtitle" />
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_get_id"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toTopOf="@id/button_back_id"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout_includeButtomBack_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView_apiData_id"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_includeSubtitle_title_id"
         tools:listitem="@layout/component_get" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_back_id"
+    <LinearLayout
+        android:id="@+id/linearLayout_includeButtomBack_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="7dp"
-        android:backgroundTint="@color/black"
-        android:text="@string/buttom_back"
-        android:textAllCaps="false"
-        android:textSize="25sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include
+
+            layout="@layout/component_button_back" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
