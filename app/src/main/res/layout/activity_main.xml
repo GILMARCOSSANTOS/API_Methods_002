@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.textview.MaterialTextView
-      android:id="@+id/textView_screenTitle_id"
+      android:id="@+id/textView_screenTitlesdsdsds_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Método GET"
@@ -28,7 +28,7 @@
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/textView_screenTitle_id"/>
+       app:layout_constraintTop_toBottomOf="@id/textView_screenTitlesdsdsds_id"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_navigateToGetActivity_id"

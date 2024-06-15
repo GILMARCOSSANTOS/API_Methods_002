@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.api_methods_002.R
 import com.example.api_methods_002.databinding.ActivityGetBinding
+import com.google.android.material.textview.MaterialTextView
 
 class GetActivity : AppCompatActivity() {
 
@@ -24,5 +25,14 @@ class GetActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        /* Execution of Functions */
+        globalLevel()
+    }
+
+    private fun globalLevel (){
+
+        val textViewTitle = findViewById<MaterialTextView>(R.id.textView_screenTitle_id)
+        textViewTitle.text = getString(R.string.get_method)
     }
 }
