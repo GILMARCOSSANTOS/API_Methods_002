@@ -23,6 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:textStyle="bold"
             tools:text="▬▬▬ Nº  IDENTIFICAÇÃO  ▬▬▬ "
             android:textSize="20sp" />
@@ -33,9 +35,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginStart="7dp"
-            tools:text="▬▬ NOME: "
+            tools:text="▬ NOME: "
             android:textStyle="bold"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView_phone_componentGet_id"
@@ -44,8 +46,8 @@
             android:layout_gravity="left"
             android:textStyle="bold"
             android:layout_marginStart="7dp"
-            tools:text="▬▬ TELEFONE: "
-            android:textSize="20sp" />
+            tools:text="▬ TELEFONE: "
+            android:textSize="15sp"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView_city_componentGet_id"
@@ -54,8 +56,8 @@
             android:layout_gravity="left"
             android:textStyle="bold"
             android:layout_marginStart="7dp"
-            tools:text="▬▬ CIDADE: "
-            android:textSize="20sp" />
+            tools:text="▬ CIDADE: "
+            android:textSize="15sp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView_cep_componentGet_id"
@@ -64,8 +66,8 @@
             android:layout_gravity="left"
             android:textStyle="bold"
             android:layout_marginStart="7dp"
-            tools:text="▬▬ CEP: "
-            android:textSize="20sp" />
+            tools:text="▬ CEP: "
+            android:textSize="15sp" />
 
         <View
             android:layout_width="match_parent"

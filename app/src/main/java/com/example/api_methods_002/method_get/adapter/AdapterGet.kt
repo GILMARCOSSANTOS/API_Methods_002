@@ -46,36 +46,46 @@ class AdapterGet(
     override fun onBindViewHolder(holder: UserJsonViewHolder, position: Int) {
 
         val jsonData = listUserJson[position]
+
+        println("JsonData001 = $jsonData")
+
         val city = jsonData.address.city
         println("City = " + city)
 
         if (jsonData != null) {
 
             holder.identification?.text = buildString {
-                append("▬▬▬ Nº IDENTIFICAÇÃO")
+                append("▬▬▬ Nº IDENTIFICAÇÃO: 00")
                 append(jsonData.id.toString())
-                append("▬▬▬")
+                append(" ▬▬▬")
             }
 
             holder.name?.text = buildString {
                 append("▬▬▬ NOME: ")
-                append(jsonData.id.toString())
+                append(jsonData.name.toString())
             }
 
             holder.phone?.text = buildString {
                 append("▬▬▬ TELEFONE: ")
-                append(jsonData.id.toString())
+                append(jsonData.phone.toString())
             }
 
             holder.city?.text = buildString {
                 append("▬▬▬ CITY: ")
-                append(jsonData.id.toString())
+                append(jsonData.address.city)
+            }
+
+            holder.cep?.text = buildString {
+                append("▬▬▬ CEP: ")
+                append(jsonData.address.zipcode)
             }
         }
     }
 
     override fun getItemCount(): Int {
 
-        return listUserJson.size
+        val a = listUserJson.size
+        return a
+        println("Lister Json = $a ")
     }
 }

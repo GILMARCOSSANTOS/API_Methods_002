@@ -2,6 +2,8 @@ package com.example.api_methods_002.method_get.view
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -39,16 +41,21 @@ class GetActivity : AppCompatActivity() {
         globalLevelSettings()
         settingRecyclerViewGet()
         responseControllerGet()
-       // backToMainActivity()
+        backToMainActivity()
     }
 
     private fun responseControllerGet() {
 
-        var responseControllerGet = ControllerGet()
+        val progressBar = findViewById<ProgressBar>(R.id.progressarBar_id)
+        progressBar.visibility = View.VISIBLE
+
+        val responseControllerGet = ControllerGet()
 
         responseControllerGet.controllerGet(object : GetResponse {
 
             override fun successResponseGet(successGet: List<ModelGetItem>) {
+
+                progressBar.visibility = View.INVISIBLE
 
                 val listDataAPI = successGet
                 instantiateUsers(listDataAPI)
@@ -56,12 +63,13 @@ class GetActivity : AppCompatActivity() {
             }
 
             override fun errorResponseGet(errorGet: String) {
-                TODO("Not yet implemented")
+
+                Toast.makeText(applicationContext, "$errorGet", Toast.LENGTH_LONG).show()
             }
         })
     }
 
-    private fun instantiateUsers(list: List<ModelGetItem>){
+    private fun instantiateUsers(list: List<ModelGetItem>) {
 
         val adapterGet = AdapterGet(this, list)
         recyclerViewGet.adapter = adapterGet
@@ -90,11 +98,11 @@ class GetActivity : AppCompatActivity() {
 
     private fun globalLevelSettings() {
 
-//        val textViewTitle = findViewById<MaterialTextView>(R.id.textView_title_id)
-//        val textViewSubTitle = findViewById<MaterialTextView>(R.id.textView_subtitle_id)
+        val textViewTitle = findViewById<MaterialTextView>(R.id.textView_title_id)
+        val textViewSubTitle = findViewById<MaterialTextView>(R.id.textView_subtitle_id)
 
         recyclerViewGet = viewBinding.recyclerViewGetId
-//        textViewTitle.text = getString(R.string.get_method)
-//        textViewSubTitle.text = getString(R.string.api_data)
+        textViewTitle.text = getString(R.string.get_method)
+        textViewSubTitle.text = getString(R.string.api_data)
     }
 }
