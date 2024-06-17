@@ -47,6 +47,9 @@ class AdapterGet(
 
         val jsonData = listUserJson[position]
 
+        val name = jsonData.name
+        println("Name User = $name")
+
         println("JsonData001 = $jsonData")
 
         val city = jsonData.address.city
@@ -84,8 +87,7 @@ class AdapterGet(
 
     override fun getItemCount(): Int {
 
-        val a = listUserJson.size
-        return a
-        println("Lister Json = $a ")
+        return listUserJson.size
     }
 }
+

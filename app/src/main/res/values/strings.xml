@@ -8,4 +8,5 @@
     <string name="subtitle_main">Escolha um dos Métodos da API</string>
     <string name="back_main_activity">Voltar para MainActivity</string>
     <string name="api_data">Dados da API</string>
+    <string name="post_method">Método POST</string>
 </resources>
