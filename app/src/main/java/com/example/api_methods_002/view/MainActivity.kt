@@ -9,8 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.api_methods_002.R
 import com.example.api_methods_002.databinding.ActivityMainBinding
 import com.example.api_methods_002.method_get.view.GetActivity
-import com.example.api_methods_002.method_post.PostActivity
-import com.google.android.material.button.MaterialButton
+import com.example.api_methods_002.method_post.view.PostActivity
 import com.google.android.material.textview.MaterialTextView
 
 class MainActivity : AppCompatActivity() {
