@@ -1,4 +1,4 @@
-package com.example.api_methods_002.method_post.model
+package com.example.api_methods_002.method_post
 
 data class PostResponse(
     val id: Int,
@@ -6,3 +6,4 @@ data class PostResponse(
     val body: String,
     val userId: Int
 )
+
