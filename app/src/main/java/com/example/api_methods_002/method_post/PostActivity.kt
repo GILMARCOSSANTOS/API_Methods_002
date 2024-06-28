@@ -1,6 +1,8 @@
 package com.example.api_methods_002.method_post
 
 import android.os.Bundle
+import android.view.View
+import android.widget.ProgressBar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,13 +21,14 @@ class PostActivity : AppCompatActivity() {
 
     /* Global Escope Variables */
     private lateinit var viewBinding: ActivityPostBinding
-    private lateinit var recyclerViewGet: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         viewBinding = ActivityPostBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -35,12 +38,12 @@ class PostActivity : AppCompatActivity() {
         /* Execution of Functions */
         globalLevelSettings()
         backToMainActivity()
-        main()
-
+        postMethod()
     }
 
-    fun main() {
+    private fun postMethod() {
 
+        val progressBar = findViewById<ProgressBar>(R.id.progressarBar_id)
         val textViewResponsePostId = viewBinding.textViewPostResponseIdId
         val textViewResponsePostUserId = viewBinding.textViewPostResponseUserIdId
         val textViewResponsePostTitle = viewBinding.textViewPostResponseTitleId
@@ -54,10 +57,17 @@ class PostActivity : AppCompatActivity() {
             userId = 1987
         )
 
+        progressBar.visibility = View.VISIBLE
+
         val call: Call<PostResponse> = apiService.createPost(postRequest)
         call.enqueue(object : Callback<PostResponse> {
+
             override fun onResponse(call: Call<PostResponse>, response: Response<PostResponse>) {
+
+                progressBar.visibility = View.INVISIBLE
+
                 if (response.isSuccessful) {
+
                     val postResponse = response.body()
                     println("Post criado com sucesso: $postResponse")
                     textViewResponsePostId.text = buildString {
@@ -109,6 +119,6 @@ class PostActivity : AppCompatActivity() {
         //recyclerViewGet = viewBinding.recyclerViewPostId
         textViewTitle.text = getString(R.string.post_method)
         textViewSubTitle.text = getString(R.string.api_data)
-
     }
 }
+

@@ -26,10 +26,12 @@ class GetActivity : AppCompatActivity() {
     private lateinit var recyclerViewGet: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         viewBinding = ActivityGetBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

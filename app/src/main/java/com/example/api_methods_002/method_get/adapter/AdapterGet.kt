@@ -10,6 +10,7 @@ import com.example.api_methods_002.method_get.model.ModelGetItem
 import com.google.android.material.textview.MaterialTextView
 
 class AdapterGet(
+
     private val context: Context,
     private val listUserJson: List<ModelGetItem>
 ) :
