@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.RecyclerView
 import com.example.api_methods_002.R
 import com.example.api_methods_002.databinding.ActivityPostBinding
 import com.example.api_methods_002.service_main.ApiConnection
@@ -51,7 +50,7 @@ class PostActivity : AppCompatActivity() {
         val apiConnection = ApiConnection()
         val apiService = apiConnection.createService(ApiService::class.java)
 
-        val postRequest = PostRequest(
+        val postRequest = ModelPostRequest(
             title = "Gilmarcos Santos",
             body = "G.Santos@gmail.com",
             userId = 1987
@@ -59,17 +58,19 @@ class PostActivity : AppCompatActivity() {
 
         progressBar.visibility = View.VISIBLE
 
-        val call: Call<PostResponse> = apiService.createPost(postRequest)
-        call.enqueue(object : Callback<PostResponse> {
+        val call: Call<ModelPostResponse> = apiService.createPost(postRequest)
+        call.enqueue(object : Callback<ModelPostResponse> {
 
-            override fun onResponse(call: Call<PostResponse>, response: Response<PostResponse>) {
+            override fun onResponse(call: Call<ModelPostResponse>, response: Response<ModelPostResponse>) {
 
                 progressBar.visibility = View.INVISIBLE
 
                 if (response.isSuccessful) {
 
                     val postResponse = response.body()
+
                     println("Post criado com sucesso: $postResponse")
+
                     textViewResponsePostId.text = buildString {
                         append("ID = ")
                         append(postResponse?.id.toString())
@@ -92,7 +93,7 @@ class PostActivity : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<PostResponse>, t: Throwable) {
+            override fun onFailure(call: Call<ModelPostResponse>, t: Throwable) {
                 println("Erro na requisição: ${t.message}")
             }
         })
